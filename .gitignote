@@ -38,4 +38,4 @@ build/
 .rvmrc
 
 ## Bower
-/public/bower_components/
+/public/lib/

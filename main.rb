@@ -1,13 +1,12 @@
 require 'bundler'
 Bundler.require
-require './lib/data_cache'
 
 TYPES = [
   {:id => 0, :name => "application/json"},
   {:id => 1, :name => "application/xml"},
   {:id => 2, :name => "application/octet-stream"}]
 
-cache = DataCache.new("TEST_DATA.LUT")
+cache = BluemixDatacache::Client.new("TEST_DATA.LUT")
 
 get '/' do
   erb :index
