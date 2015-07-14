@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    bluemix_datacache (0.1.0)
     rack (1.6.1)
     rack-protection (1.5.3)
       rack
@@ -14,4 +15,5 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bluemix_datacache
   sinatra

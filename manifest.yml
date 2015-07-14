@@ -1,5 +1,5 @@
 applications:
-- name: data-cache-sample
+- name: data-cache-viewer
   disk_quota: 1024M
   path: .
   instances: 1
