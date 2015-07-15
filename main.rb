@@ -6,6 +6,9 @@ TYPES = [
   {:id => 1, :name => "application/xml"},
   {:id => 2, :name => "application/octet-stream"}]
 
+NOT_FOUND  = "<html>404</html>"
+SERVER_ERROR = "<html>500</html>"
+
 get '/' do
   erb :index
 end
@@ -22,7 +25,7 @@ get '/search/:map/:key' do
   cache = BluemixDatacache::Client.new(map)
   @result = nil
   @value = cache.select(key)
-  unless @value[:value].include?("404")
+  unless @value[:value].include?(NOT_FOUND) || @value[:value].include?(SERVER_ERROR)
     @result = "Data has found"
   else
     @value = nil
@@ -45,11 +48,11 @@ post '/new' do
   content_type = TYPES[@params[:type].to_i][:name]
   result = cache.insert(key, value, content_type)
   if result == 200
-    @result = "Insert success"
+    @result = "Insert success #{result}"
   elsif result == 400
-    @result = "Insert failed"
+    @result = "Insert failed #{result}"
   else
-    @result = "Unknown error"
+    @result = "Unknown error #{result}"
   end
   erb :new
 end
