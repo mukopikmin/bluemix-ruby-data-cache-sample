@@ -22,7 +22,7 @@ get '/search/:map/:key' do
   cache = BluemixDatacache::Client.new(map)
   @result = nil
   @value = cache.select(key)
-  unless @value[:value].include?("404")
+  unless @value[:value].include?("404") || @value[:value].include?("500")
     @result = "Data has found"
   else
     @value = nil
