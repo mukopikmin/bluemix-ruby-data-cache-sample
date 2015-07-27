@@ -8,6 +8,12 @@ Sample sinatra application using Bluemix Data Cache service
 * Ruby 2.0+
 * Bluemix Data Cache service
 
+
+## Installation
+
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://hub.jazz.net/git/idsorg/ruby-data-cache-sample)
+
+
 ## Development
 
 1. Crete Data cache service
