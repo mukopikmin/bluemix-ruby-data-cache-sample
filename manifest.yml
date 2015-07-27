@@ -1,5 +1,5 @@
 applications:
-- name: data-cache-viewer
+- name: ruby-data-cache-sample
   disk_quota: 1024M
   path: .
   instances: 1
