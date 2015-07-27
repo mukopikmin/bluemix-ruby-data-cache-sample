@@ -1,6 +1,13 @@
+---
+declared-services:
+  ruby-data-cache-sample - Data Cache
+    label: DataCache
+    plan: free
 applications:
 - name: ruby-data-cache-sample
   disk_quota: 1024M
   path: .
   instances: 1
   memory: 128M
+  services:
+  - ruby-data-cache-sample - Data Cache
