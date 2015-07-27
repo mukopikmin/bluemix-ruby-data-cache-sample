@@ -11,7 +11,7 @@ Sample sinatra application using Bluemix Data Cache service
 
 ## Installation
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://hub.jazz.net/git/idsorg/ruby-data-cache-sample)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/mukopikmin/bluemix-ruby-data-cache-sample.git)
 
 
 ## Development
